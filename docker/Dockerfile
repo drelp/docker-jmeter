@@ -1,7 +1,7 @@
 FROM openjdk:8-jre-slim
 
 ##jmeter版本
-ARG JMETER_VERSION=5.5
+ARG JMETER_VERSION=5.6.3
 
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
 COPY sources.list /etc/apt/sources.list
