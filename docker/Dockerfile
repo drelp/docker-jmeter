@@ -3,6 +3,9 @@ FROM openjdk:8-jre-slim
 ##jmeter版本
 ARG JMETER_VERSION=5.5
 
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
+COPY sources.list /etc/apt/sources.list
+
 #安装必要软件
 RUN apt-get clean && \
     apt-get update && \
